@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Website {% endblock %}</title>
+</head>
+<body>
+<hi>{% block header %}Welcome to eMobilis{% endblock %}</hi>
+<nav>
+    <ul>
+    <li><a href="{% url 'my_index' %}">Home</a></li>
+    <li><a href="{% url 'my_about' %}">About</a></li>
+    <li><a href="{% url 'my_contact' %}">Contact</a></li>
+     <li><a href="{% url 'my_gallery' %}">Gallery</a></li>
+    </ul>
+    <main>
+
+        {% block content %}{% endblock %}
+    </main>
+
+
+<footer>
+    <p>&copy; 2024</p>
+</footer>
+</nav>
+</body>
+</html>
